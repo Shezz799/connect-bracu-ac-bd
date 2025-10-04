@@ -1,77 +1,26 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
     { "source": "/studentdashboard", "destination": "/studentdashboard.html" },
-    { "source": "/studentdashboard/styles.css", "destination": "/styles.css" },
-    { "source": "/studentdashboard/assets/(.*)", "destination": "/assets/$1" },
     { "source": "/studentdashboard/gradesheet", "destination": "/gradesheet.html" },
-    { "source": "/studentdashboard/gradesheet/styles.css", "destination": "/styles.css" },
-    { "source": "/studentdashboard/gradesheet/dashboard.js", "destination": "/dashboard.js" },
-    { "source": "/studentdashboard/gradesheet/assets/(.*)", "destination": "/assets/$1" }
-    ,
-  { "source": "/studentdashboard/advising/preregistrationphaseone", "destination": "/phase-one.html" },
-  { "source": "/studentdashboard/advising/preregistrationphaseone/styles.css", "destination": "/styles.css" },
-  { "source": "/studentdashboard/advising/preregistrationphaseone/dashboard.js", "destination": "/dashboard.js" },
-  { "source": "/studentdashboard/advising/preregistrationphaseone/assets/(.*)", "destination": "/assets/$1" }
-  ,
-  { "source": "/studentdashboard/advising/preregistrationphasetwo", "destination": "/phase-two.html" },
-  { "source": "/studentdashboard/advising/preregistrationphasetwo/styles.css", "destination": "/styles.css" },
-  { "source": "/studentdashboard/advising/preregistrationphasetwo/dashboard.js", "destination": "/dashboard.js" },
-  { "source": "/studentdashboard/advising/preregistrationphasetwo/assets/(.*)", "destination": "/assets/$1" }
-  ,
-  { "source": "/studentdashboard/advising/sectionseatstatus", "destination": "/section-seat-status.html" },
-  { "source": "/studentdashboard/advising/sectionseatstatus/styles.css", "destination": "/styles.css" },
-  { "source": "/studentdashboard/advising/sectionseatstatus/dashboard.js", "destination": "/dashboard.js" },
-  { "source": "/studentdashboard/advising/sectionseatstatus/assets/(.*)", "destination": "/assets/$1" }
-  ,
-  { "source": "/studentdashboard/scholarship/apply", "destination": "/scholarship-apply.html" },
-  { "source": "/studentdashboard/scholarship/apply/styles.css", "destination": "/styles.css" },
-  { "source": "/studentdashboard/scholarship/apply/dashboard.js", "destination": "/dashboard.js" },
-  { "source": "/studentdashboard/scholarship/apply/assets/(.*)", "destination": "/assets/$1" }
-  ,
-  { "source": "/studentdashboard/scholarship/history", "destination": "/scholarship-history.html" },
-  { "source": "/studentdashboard/scholarship/history/styles.css", "destination": "/styles.css" },
-  { "source": "/studentdashboard/scholarship/history/dashboard.js", "destination": "/dashboard.js" },
-  { "source": "/studentdashboard/scholarship/history/assets/(.*)", "destination": "/assets/$1" }
-  ,
-  { "source": "/studentdashboard/coursedrop", "destination": "/course-drop-application.html" },
-  { "source": "/studentdashboard/coursedrop/styles.css", "destination": "/styles.css" },
-  { "source": "/studentdashboard/coursedrop/dashboard.js", "destination": "/dashboard.js" },
-  { "source": "/studentdashboard/coursedrop/assets/(.*)", "destination": "/assets/$1" }
-  ,
-  { "source": "/studentdashboard/probation", "destination": "/probation-application.html" },
-  { "source": "/studentdashboard/probation/styles.css", "destination": "/styles.css" },
-  { "source": "/studentdashboard/probation/dashboard.js", "destination": "/dashboard.js" },
-  { "source": "/studentdashboard/probation/assets/(.*)", "destination": "/assets/$1" }
-  ,
-  { "source": "/studentdashboard/semesterdrop", "destination": "/semester-drop-application.html" },
-  { "source": "/studentdashboard/semesterdrop/styles.css", "destination": "/styles.css" },
-  { "source": "/studentdashboard/semesterdrop/dashboard.js", "destination": "/dashboard.js" },
-  { "source": "/studentdashboard/semesterdrop/assets/(.*)", "destination": "/assets/$1" }
-  ,
-  { "source": "/studentdashboard/payslip", "destination": "/payslip-view.html" },
-  { "source": "/studentdashboard/payslip/styles.css", "destination": "/styles.css" },
-  { "source": "/studentdashboard/payslip/dashboard.js", "destination": "/dashboard.js" },
-  { "source": "/studentdashboard/payslip/assets/(.*)", "destination": "/assets/$1" }
-  ,
-  { "source": "/studentdashboard/myprofile", "destination": "/my-profile.html" },
-  { "source": "/studentdashboard/myprofile/styles.css", "destination": "/styles.css" },
-  { "source": "/studentdashboard/myprofile/dashboard.js", "destination": "/dashboard.js" },
-  { "source": "/studentdashboard/myprofile/assets/(.*)", "destination": "/assets/$1" }
-  ,
-  { "source": "/studentdashboard/accountsettings", "destination": "/account-settings.html" },
-  { "source": "/studentdashboard/accountsettings/styles.css", "destination": "/styles.css" },
-  { "source": "/studentdashboard/accountsettings/dashboard.js", "destination": "/dashboard.js" },
-  { "source": "/studentdashboard/accountsettings/assets/(.*)", "destination": "/assets/$1" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-      ]
-    }
+    { "source": "/studentdashboard/advising/preregistrationphaseone", "destination": "/phase-one.html" },
+    { "source": "/studentdashboard/advising/preregistrationphasetwo", "destination": "/phase-two.html" },
+    { "source": "/studentdashboard/advising/sectionseatstatus", "destination": "/section-seat-status.html" },
+    { "source": "/studentdashboard/scholarship/apply", "destination": "/scholarship-apply.html" },
+    { "source": "/studentdashboard/scholarship/history", "destination": "/scholarship-history.html" },
+    { "source": "/studentdashboard/coursedrop", "destination": "/course-drop-application.html" },
+    { "source": "/studentdashboard/semesterdrop", "destination": "/semester-drop-application.html" },
+    { "source": "/studentdashboard/probation", "destination": "/probation-application.html" },
+    { "source": "/studentdashboard/payslip", "destination": "/payslip-view.html" },
+    { "source": "/studentdashboard/myprofile", "destination": "/my-profile.html" },
+    { "source": "/studentdashboard/accountsettings", "destination": "/account-settings.html" },
+
+    { "source": "/studentdashboard/assets/(.*)", "destination": "/assets/$1" },
+    { "source": "/studentdashboard/(.*)/assets/(.*)", "destination": "/assets/$2" },
+
+    { "source": "/studentdashboard/styles.css", "destination": "/styles.css" },
+    { "source": "/studentdashboard/(.*)/styles.css", "destination": "/styles.css" },
+    { "source": "/studentdashboard/dashboard.js", "destination": "/dashboard.js" },
+    { "source": "/studentdashboard/(.*)/dashboard.js", "destination": "/dashboard.js" }
   ]
 }
