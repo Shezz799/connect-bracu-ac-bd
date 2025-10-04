@@ -1,29 +1,28 @@
 {
-  "version": 2,
   "cleanUrls": true,
-  "routes": [
-    { "src": "/studentdashboard", "dest": "/studentdashboard.html" },
-    { "src": "/studentdashboard/gradesheet", "dest": "/gradesheet.html" },
-    { "src": "/studentdashboard/advising/preregistrationphaseone", "dest": "/phase-one.html" },
-    { "src": "/studentdashboard/advising/preregistrationphasetwo", "dest": "/phase-two.html" },
-    { "src": "/studentdashboard/advising/sectionseatstatus", "dest": "/section-seat-status.html" },
-    { "src": "/studentdashboard/scholarship/apply", "dest": "/scholarship-apply.html" },
-    { "src": "/studentdashboard/scholarship/history", "dest": "/scholarship-history.html" },
-    { "src": "/studentdashboard/coursedrop", "dest": "/course-drop-application.html" },
-    { "src": "/studentdashboard/semesterdrop", "dest": "/semester-drop-application.html" },
-    { "src": "/studentdashboard/probation", "dest": "/probation-application.html" },
-    { "src": "/studentdashboard/payslip", "dest": "/payslip-view.html" },
-    { "src": "/studentdashboard/myprofile", "dest": "/my-profile.html" },
-    { "src": "/studentdashboard/accountsettings", "dest": "/account-settings.html" },
+  "rewrites": [
+    { "source": "/studentdashboard", "destination": "/studentdashboard" },
+    { "source": "/studentdashboard/gradesheet", "destination": "/gradesheet" },
+    { "source": "/studentdashboard/advising/preregistrationphaseone", "destination": "/phase-one" },
+    { "source": "/studentdashboard/advising/preregistrationphasetwo", "destination": "/phase-two" },
+    { "source": "/studentdashboard/advising/sectionseatstatus", "destination": "/section-seat-status" },
+    { "source": "/studentdashboard/scholarship/apply", "destination": "/scholarship-apply" },
+    { "source": "/studentdashboard/scholarship/history", "destination": "/scholarship-history" },
+    { "source": "/studentdashboard/coursedrop", "destination": "/course-drop-application" },
+    { "source": "/studentdashboard/semesterdrop", "destination": "/semester-drop-application" },
+    { "source": "/studentdashboard/probation", "destination": "/probation-application" },
+    { "source": "/studentdashboard/payslip", "destination": "/payslip-view" },
+    { "source": "/studentdashboard/myprofile", "destination": "/my-profile" },
+    { "source": "/studentdashboard/accountsettings", "destination": "/account-settings" },
 
-    { "src": "/studentdashboard/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "/studentdashboard/(.*)/assets/(.*)", "dest": "/assets/$2" },
+    { "source": "/studentdashboard/assets/(.*)", "destination": "/assets/$1" },
+    { "source": "/studentdashboard/(.*)/assets/(.*)", "destination": "/assets/$2" },
 
-    { "src": "/studentdashboard/styles.css", "dest": "/styles.css" },
-    { "src": "/studentdashboard/(.*)/styles.css", "dest": "/styles.css" },
-    { "src": "/studentdashboard/dashboard.js", "dest": "/dashboard.js" },
-    { "src": "/studentdashboard/(.*)/dashboard.js", "dest": "/dashboard.js" },
+    { "source": "/studentdashboard/styles.css", "destination": "/styles.css" },
+    { "source": "/studentdashboard/(.*)/styles.css", "destination": "/styles.css" },
+    { "source": "/studentdashboard/dashboard.js", "destination": "/dashboard.js" },
+    { "source": "/studentdashboard/(.*)/dashboard.js", "destination": "/dashboard.js" },
 
-    { "src": "/studentdashboard/([^/]+)/?", "dest": "/$1.html" }
+    { "source": "/studentdashboard/:page", "destination": "/:page" }
   ]
 }
