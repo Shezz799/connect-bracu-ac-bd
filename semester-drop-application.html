@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Semester Drop Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css?v=2" />
+    <script src="./dashboard.js?v=3" defer></script>
+  </head>
+  <body class="dashboard-body">
+    <aside class="sidebar" aria-label="Sidebar menu">
+      <div class="sidebar-top">
+        <img class="sidebar-logo" src="./assets/braculogo.png" alt="Logo" />
+        <div class="sidebar-head">
+          <div class="head-line1">Student Lifecycle</div>
+          <div class="head-line2">Management</div>
+        </div>
+        <button class="sidebar-toggle" aria-label="Collapse">›</button>
+      </div>
+      <nav class="sidebar-nav" aria-label="Main">
+        <div class="nav-group has-sub" data-sub="advising">
+          <button type="button" class="nav-main" aria-expanded="false">
+            <span class="nav-icon">A</span>
+            <span class="nav-text">Advising</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <ul class="submenu" aria-label="Advising submenu">
+            <li><a href="phase-one.html" data-route="/studentdashboard/advising/preregistrationphaseone" class="submenu-link">Pre-Registration Phase One</a></li>
+            <li><a href="phase-two.html" data-route="/studentdashboard/advising/preregistrationphasetwo" class="submenu-link">Pre-Registration Phase Two</a></li>
+            <li><a href="section-seat-status.html" data-route="/studentdashboard/advising/sectionseatstatus" class="submenu-link">Section Seat Status</a></li>
+          </ul>
+        </div>
+        <div class="nav-group has-sub" data-sub="scholarship">
+          <button type="button" class="nav-main" aria-expanded="false">
+            <span class="nav-icon">S</span>
+            <span class="nav-text">Scholarship &amp; Waiver</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <ul class="submenu" aria-label="Scholarship and Waiver submenu">
+            <li><a href="scholarship-apply.html" data-route="/studentdashboard/scholarship/apply" class="submenu-link">Apply</a></li>
+            <li><a href="scholarship-history.html" data-route="/studentdashboard/scholarship/history" class="submenu-link">History</a></li>
+          </ul>
+        </div>
+        <a class="nav-item" href="course-drop-application.html" data-route="/studentdashboard/coursedrop">
+          <span class="nav-icon">C</span>
+          <span class="nav-text">Course Drop Application</span>
+        </a>
+        <a class="nav-item active" href="semester-drop-application.html" data-route="/studentdashboard/semesterdrop">
+          <span class="nav-icon">S</span>
+          <span class="nav-text">Semester Drop Application</span>
+        </a>
+        <a class="nav-item" href="gradesheet.html" data-route="/studentdashboard/gradesheet">
+          <span class="nav-icon">G</span>
+          <span class="nav-text">Grade Sheet</span>
+        </a>
+        <a class="nav-item" href="probation-application.html" data-route="/studentdashboard/probation">
+          <span class="nav-icon">P</span>
+          <span class="nav-text">Probation</span>
+        </a>
+        <a class="nav-item" href="payslip-view.html" data-route="/studentdashboard/payslip">
+          <span class="nav-icon">P</span>
+          <span class="nav-text">Payslip</span>
+        </a>
+      </nav>
+    </aside>
+
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="role">Student</span>
+        <span class="divider">/</span>
+        <span class="section">Semester Drop Application</span>
+      </div>
+      <div class="topbar-right">
+        <div class="search">
+          <span class="icon" aria-hidden="true">🔍</span>
+          <input type="search" placeholder="Search" />
+          <kbd>Ctrl</kbd><kbd>K</kbd>
+        </div>
+        <button class="icon-btn" title="Full screen">⛶</button>
+        <button class="icon-btn" title="Notifications">🔔</button>
+        <div class="avatar" title="Profile"><img src="./assets/me2.png" alt="User"/></div>
+      </div>
+    </header>
+
+    <main class="dash-content">
+      <div class="panel" style="padding: 0;">
+        <div class="panel-title">Apply for Dropping Semester</div>
+        <div class="panel-body" style="padding: 16px 16px 0;">
+          <div style="background:#ffffff; border-radius:12px; border:1px solid #e8edf4; padding:16px;">
+            <!-- Grid: left form and right student info card -->
+            <div style="display:grid; grid-template-columns: 1fr 360px; gap:16px; align-items:start;">
+              <!-- Left column: form -->
+              <div>
+                <!-- Purple info banner -->
+                <div style="background:#f1e9ff; border:1px solid #d9caff; color:#4b5563; border-radius:10px; padding:12px 14px; margin-bottom:16px; display:flex; align-items:center; gap:10px;">
+                  <span style="display:inline-flex; width:28px; height:28px; border-radius:8px; background:#8b5cf6; color:#fff; align-items:center; justify-content:center;">⚠️</span>
+                  <div>
+                    <div style="font-weight:600; color:#4338ca;">Semester Drop - Refund Eligibility</div>
+                    <div style="font-size:12px; color:#6b7280;">Please submit your request within the course drop timeline.</div>
+                  </div>
+                </div>
+
+                <!-- Semester select -->
+                <label style="display:block; font-size:12px; color:#6b7280; margin:10px 0 6px 0;">Semester you wish to drop <span style="color:#ef4444">*</span></label>
+                <div style="display:flex; gap:10px; align-items:center; margin-bottom:14px;">
+                  <select style="flex:1; height:38px; border:1px solid #e5e7eb; border-radius:8px; padding:0 12px; outline:none;">
+                    <option>FALL 2025</option>
+                    <option>SUMMER 2025</option>
+                    <option>SPRING 2025</option>
+                  </select>
+                </div>
+
+                <!-- Reasons radios -->
+                <label style="display:block; font-size:12px; color:#6b7280; margin:14px 0 6px 0;">Reasons For Absence <span style="color:#ef4444">*</span></label>
+                <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:center; border:1px solid #e5e7eb; border-radius:8px; padding:10px 12px; margin-bottom:16px;">
+                  <label style="display:flex; align-items:center; gap:8px; color:#374151;">
+                    <input type="radio" name="reason" />
+                    <span>Illness/Health Issues</span>
+                  </label>
+                  <label style="display:flex; align-items:center; gap:8px; color:#374151;">
+                    <input type="radio" name="reason" />
+                    <span>Family Emergency/Compassionate Ground</span>
+                  </label>
+                  <label style="display:flex; align-items:center; gap:8px; color:#374151;">
+                    <input type="radio" name="reason" />
+                    <span>Others</span>
+                  </label>
+                </div>
+
+                <!-- Attachment row -->
+                <div style="display:grid; grid-template-columns: 1fr 1fr auto; gap:12px; align-items:center; margin-bottom:16px;">
+                  <input type="text" placeholder="Attachment Title *" style="height:38px; border:1px solid #e5e7eb; border-radius:8px; padding:0 12px; outline:none;" />
+                  <label style="display:flex; align-items:center; height:38px; border:1px solid #e5e7eb; border-radius:8px; overflow:hidden;">
+                    <span style="padding:0 10px; color:#6b7280;">📎 Choose File <span style="color:#ef4444">*</span></span>
+                    <input type="file" style="flex:1; height:100%; opacity:0; cursor:pointer;" />
+                  </label>
+                  <button type="button" style="height:38px; padding:0 16px; background:#a78bfa; color:#fff; border:none; border-radius:8px; font-weight:600;">⨁ Add</button>
+                </div>
+
+                <!-- Submit row -->
+                <div style="display:flex; justify-content:flex-end; padding:8px 0 6px 0;">
+                  <button type="button" style="height:36px; padding:0 16px; background:#7dd3fc; color:#0f172a; border:none; border-radius:8px; font-weight:600; display:inline-flex; align-items:center; gap:8px;">
+                    <span>💾</span> <span>Submit</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right column: student info card -->
+              <aside style="background:#ffffff; border:1px solid #e8edf4; border-radius:10px; padding:14px;">
+                <div style="display:grid; grid-template-columns: 140px 1fr; row-gap:8px; column-gap:10px; font-size:12px; color:#6b7280;">
+                  <div style="color:#6b7280;">Student ID</div><div style="color:#111827; font-weight:600;">22341022</div>
+                  <div style="color:#6b7280;">Name</div><div style="color:#111827; font-weight:600;">SHEHZAD HAKIM</div>
+                  <div style="color:#6b7280;">Department</div><div style="color:#111827; font-weight:600;">DEPARTMENT OF COMPUTER SCIENCE &amp; ENGINEERING</div>
+                  <div style="color:#6b7280;">Program</div><div style="color:#111827; font-weight:600;">BACHELOR OF SCIENCE IN COMPUTER SCIENCE</div>
+                  <div style="color:#6b7280;">Current Semester</div><div style="color:#111827; font-weight:600;">SUMMER 2025</div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="dash-footer">
+      <div class="footer-inner">
+        <span>2025© <a href="#" class="link">BRAC University</a>. All rights reserved.</span>
+        <span class="right">Developed by: <span class="badge">bracIT</span></span>
+      </div>
+    </footer>
+    <script>
+      // Fallback stylesheet loader
+      window.addEventListener('load', function(){
+        try {
+          var isGrid = getComputedStyle(document.body).display === 'grid';
+          if (!isGrid) {
+            var l = document.createElement('link');
+            l.rel = 'stylesheet';
+            l.href = './styles.css?fallback=1';
+            document.head.appendChild(l);
+          }
+        } catch (e) {}
+      });
+    </script>
+  </body>
+  </html>

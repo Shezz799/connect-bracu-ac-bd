@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BracU Central Login — Replica</title>
+
+    <!-- Font (approximate the look) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./login.js" defer></script>
+  </head>
+  <body>
+    <!-- Background doodles placeholder overlay handled in CSS -->
+
+    <main class="page">
+      <section class="brand-block" aria-label="Brand">
+  <img class="brand-logo" src="./assets/braculogo.png" alt="BRAC University logo placeholder" />
+        <p class="brand-tag">Inspiring Excellence</p>
+        <h1 class="brand-title">BracU Central Login</h1>
+      </section>
+
+      <section class="card login-card" aria-labelledby="login-title">
+        <h2 id="login-title" class="card-title">Sign in to your account</h2>
+
+        <form class="login-form" action="#" method="post" novalidate>
+          <label class="field">
+            <span class="field-label">Username or email</span>
+            <input id="login-username" type="text" name="username" placeholder="Enter username or email" autocomplete="username" />
+          </label>
+
+          <label class="field">
+            <div class="field-row">
+              <span class="field-label">Password</span>
+              <a class="link tiny" href="#">Forgot Password?</a>
+            </div>
+            <input id="login-password" type="password" name="password" placeholder="Enter your password" autocomplete="current-password" />
+          </label>
+
+          <button class="btn primary" type="submit">Sign In</button>
+
+          <div class="error-message" id="login-error" role="alert" aria-live="assertive"></div>
+
+          <div class="or-sep" role="separator" aria-label="or sign in with">
+            <span>Or sign in with</span>
+          </div>
+
+          <button type="button" class="btn google">
+            <img src="./assets/google-g.svg" alt="Google logo placeholder" />
+            <span>Google</span>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer" aria-hidden="true">
+      <!-- Subtle footer illustration placeholder is part of background -->
+    </footer>
+  </body>
+</html>

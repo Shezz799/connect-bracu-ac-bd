@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grade Sheet — Replica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css?v=2" />
+  <script src="./dashboard.js?v=3" defer></script>
+  </head>
+  <body class="dashboard-body">
+    <!-- Sidebar (same as dashboard) -->
+    <aside class="sidebar" aria-label="Sidebar menu">
+      <div class="sidebar-top">
+        <img class="sidebar-logo" src="./assets/braculogo.png" alt="Logo" />
+        <div class="sidebar-head">
+          <div class="head-line1">Student Lifecycle</div>
+          <div class="head-line2">Management</div>
+        </div>
+        <button class="sidebar-toggle" aria-label="Collapse">›</button>
+      </div>
+      <nav class="sidebar-nav" aria-label="Main">
+        <div class="nav-group has-sub" data-sub="advising">
+          <button type="button" class="nav-main" aria-expanded="false">
+            <span class="nav-icon">A</span>
+            <span class="nav-text">Advising</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <ul class="submenu" aria-label="Advising submenu">
+            <li><a href="phase-one.html" data-route="/studentdashboard/advising/preregistrationphaseone" class="submenu-link">Pre-Registration Phase One</a></li>
+            <li><a href="phase-two.html" data-route="/studentdashboard/advising/preregistrationphasetwo" class="submenu-link">Pre-Registration Phase Two</a></li>
+            <li><a href="section-seat-status.html" data-route="/studentdashboard/advising/sectionseatstatus" class="submenu-link">Section Seat Status</a></li>
+          </ul>
+        </div>
+        <div class="nav-group has-sub" data-sub="scholarship">
+          <button type="button" class="nav-main" aria-expanded="false">
+            <span class="nav-icon">S</span>
+            <span class="nav-text">Scholarship &amp; Waiver</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <ul class="submenu" aria-label="Scholarship and Waiver submenu">
+                <li><a href="scholarship-apply.html" data-route="/studentdashboard/scholarship/apply" class="submenu-link">Apply</a></li>
+                <li><a href="scholarship-history.html" data-route="/studentdashboard/scholarship/history" class="submenu-link">History</a></li>
+          </ul>
+        </div>
+        <a class="nav-item" href="course-drop-application.html" data-route="/studentdashboard/coursedrop">
+          <span class="nav-icon">C</span>
+          <span class="nav-text">Course Drop Application</span>
+        </a>
+        <a class="nav-item" href="semester-drop-application.html" data-route="/studentdashboard/semesterdrop">
+          <span class="nav-icon">S</span>
+          <span class="nav-text">Semester Drop Application</span>
+        </a>
+        <a class="nav-item active" href="gradesheet.html" data-route="/studentdashboard/gradesheet">
+          <span class="nav-icon">G</span>
+          <span class="nav-text">Grade Sheet</span>
+        </a>
+        <a class="nav-item" href="probation-application.html" data-route="/studentdashboard/probation">
+          <span class="nav-icon">P</span>
+          <span class="nav-text">Probation</span>
+        </a>
+        <a class="nav-item" href="payslip-view.html" data-route="/studentdashboard/payslip">
+          <span class="nav-icon">P</span>
+          <span class="nav-text">Payslip</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="role">Student</span>
+        <span class="divider">/</span>
+        <span class="section">Grade Sheet</span>
+      </div>
+      <div class="topbar-right">
+        <div class="search">
+          <span class="icon" aria-hidden="true">🔍</span>
+          <input type="search" placeholder="Search" />
+          <kbd>Ctrl</kbd><kbd>K</kbd>
+        </div>
+        <button class="icon-btn" title="Full screen">⛶</button>
+        <button class="icon-btn" title="Notifications">🔔</button>
+        <div class="avatar" title="Profile"><img src="./assets/me2.png" alt="User"/></div>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <main class="dash-content">
+      <h2 class="panel-title" style="margin:0 0 10px 8px; font-size:16px;">Download Grade Sheet</h2>
+  <div class="row row-gradesheet">
+        <section class="panel" style="grid-column: 1 / span 1;">
+          <div class="panel-body" style="min-height: 260px; display:flex; align-items:center; justify-content:center;">
+            <div style="display:flex; gap:16px; align-items:center; justify-content:center;">
+              <a class="btn primary btn-preview" href="./assets/grades/22341022_UG_CS_Gradesheet_Web.pdf" target="_blank" rel="noopener" style="width:auto; padding:0 18px; height:38px; background:#4fc0ff;">
+                <span style="font-weight:700;">👁️‍🗨️&nbsp; Preview</span>
+              </a>
+              <a class="btn primary btn-download" href="./assets/grades/22341022_UG_CS_Gradesheet_Web.pdf" download="22341022_UG_CS_Gradesheet_Web.pdf" style="width:auto; padding:0 18px; height:38px; background:linear-gradient(90deg,#6a8dff,#7a3eff);">
+                <span style="font-weight:700;">⬇️&nbsp; Download</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <aside class="panel" style="grid-column: 2 / span 1;">
+          <div class="panel-body" style="min-height: 260px; display: flex; align-items: center; justify-content: center;">
+            <div style="border:1px solid #e5e7eb; border-radius:8px; padding:32px 74px; font-size:14px; font-weight:700; color:#374151; background:#fff; line-height: 1.5;">
+              <div style="display:grid; grid-template-columns: 140px 1fr; gap:6px;">
+                <div style="color:#9ca3af;">Student ID</div><div>22341022</div>
+                <div style="color:#9ca3af;">Name</div><div>SHEHZAD HAKIM</div>
+                <div style="color:#9ca3af;">Department</div><div>DEPARTMENT OF COMPUTER SCIENCE &amp; ENGINEERING</div>
+                <div style="color:#9ca3af;">Program</div><div>BACHELOR OF SCIENCE IN COMPUTER SCIENCE</div>
+                <div style="color:#9ca3af;">Current Semester</div><div>SUMMER 2025</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="dash-footer">
+      <div class="footer-inner">
+        <span>2025© <a href="#" class="link">BRAC University</a>. All rights reserved.</span>
+        <span class="right">Developed by: <span class="badge">bracIT</span></span>
+      </div>
+    </footer>
+    <script>
+      // Fallback: if styles didn't apply (when previewing as local file with stale cache), inject again
+      window.addEventListener('load', function(){
+        try {
+          var isGrid = getComputedStyle(document.body).display === 'grid';
+          if (!isGrid) {
+            var l = document.createElement('link');
+            l.rel = 'stylesheet';
+            l.href = './styles.css?fallback=1';
+            document.head.appendChild(l);
+          }
+        } catch (e) {}
+      });
+    </script>
+  </body>
+</html>

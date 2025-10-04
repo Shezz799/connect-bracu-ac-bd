@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css?v=2" />
+    <script src="./dashboard.js?v=3" defer></script>
+  </head>
+  <body class="dashboard-body">
+    <aside class="sidebar" aria-label="Sidebar menu">
+      <div class="sidebar-top">
+        <img class="sidebar-logo" src="./assets/braculogo.png" alt="Logo" />
+        <div class="sidebar-head">
+          <div class="head-line1">Student Lifecycle</div>
+          <div class="head-line2">Management</div>
+        </div>
+        <button class="sidebar-toggle" aria-label="Collapse">›</button>
+      </div>
+      <nav class="sidebar-nav" aria-label="Main">
+        <div class="nav-group has-sub" data-sub="advising">
+          <button type="button" class="nav-main" aria-expanded="false">
+            <span class="nav-icon">A</span>
+            <span class="nav-text">Advising</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <ul class="submenu" aria-label="Advising submenu">
+            <li><a href="phase-one.html" data-route="/studentdashboard/advising/preregistrationphaseone" class="submenu-link">Pre-Registration Phase One</a></li>
+            <li><a href="phase-two.html" data-route="/studentdashboard/advising/preregistrationphasetwo" class="submenu-link">Pre-Registration Phase Two</a></li>
+            <li><a href="section-seat-status.html" data-route="/studentdashboard/advising/sectionseatstatus" class="submenu-link">Section Seat Status</a></li>
+          </ul>
+        </div>
+        <div class="nav-group has-sub" data-sub="scholarship">
+          <button type="button" class="nav-main" aria-expanded="false">
+            <span class="nav-icon">S</span>
+            <span class="nav-text">Scholarship &amp; Waiver</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <ul class="submenu" aria-label="Scholarship and Waiver submenu">
+            <li><a href="scholarship-apply.html" data-route="/studentdashboard/scholarship/apply" class="submenu-link">Apply</a></li>
+            <li><a href="scholarship-history.html" data-route="/studentdashboard/scholarship/history" class="submenu-link">History</a></li>
+          </ul>
+        </div>
+        <a class="nav-item" href="course-drop-application.html" data-route="/studentdashboard/coursedrop">
+          <span class="nav-icon">C</span>
+          <span class="nav-text">Course Drop Application</span>
+        </a>
+        <a class="nav-item" href="semester-drop-application.html" data-route="/studentdashboard/semesterdrop">
+          <span class="nav-icon">S</span>
+          <span class="nav-text">Semester Drop Application</span>
+        </a>
+        <a class="nav-item" href="gradesheet.html" data-route="/studentdashboard/gradesheet">
+          <span class="nav-icon">G</span>
+          <span class="nav-text">Grade Sheet</span>
+        </a>
+        <a class="nav-item" href="probation-application.html" data-route="/studentdashboard/probation">
+          <span class="nav-icon">P</span>
+          <span class="nav-text">Probation</span>
+        </a>
+        <a class="nav-item" href="payslip-view.html" data-route="/studentdashboard/payslip">
+          <span class="nav-icon">P</span>
+          <span class="nav-text">Payslip</span>
+        </a>
+      </nav>
+    </aside>
+
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="role">Student</span>
+      </div>
+      <div class="topbar-right">
+        <div class="search">
+          <span class="icon" aria-hidden="true">🔍</span>
+          <input type="search" placeholder="Search" />
+          <kbd>Ctrl</kbd><kbd>K</kbd>
+        </div>
+        <button class="icon-btn" title="Full screen">⛶</button>
+        <button class="icon-btn" title="Notifications">🔔</button>
+        <div class="avatar" title="Profile"><img src="./assets/me2.png" alt="User"/></div>
+      </div>
+    </header>
+
+    <main class="dash-content">
+      <!-- Header card with avatar, name and stats -->
+      <div class="panel" style="padding:0;">
+        <div class="panel-body" style="padding: 16px;">
+          <div style="background:#ffffff; border:1px solid #e8edf4; border-radius:12px; padding:16px;">
+            <div style="display:grid; grid-template-columns: 120px 1fr; gap:16px; align-items:center;">
+              <div style="width:120px; height:120px; border-radius:16px; overflow:hidden; background:#f3f4f6; display:grid; place-items:center;">
+                <img src="./assets/me2.png" alt="Profile" style="width:100%; height:100%; object-fit:cover;"/>
+              </div>
+              <div>
+                <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+                  <div>
+                    <div style="font-size:20px; font-weight:800; color:#111827;">SHEHZAD HAKIM</div>
+                    <div style="display:flex; gap:14px; color:#6b7280; font-size:12px; margin-top:4px;">
+                      <span>✦ 22341022</span>
+                      <span>✦ CS</span>
+                      <span>✦ Summer 2022</span>
+                    </div>
+                  </div>
+                  <div style="display:flex; gap:12px;">
+                    <div style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:10px; padding:10px 14px; min-width:150px;">
+                      <div style="color:#10b981; font-weight:700;">🔋 117</div>
+                      <div style="font-size:12px; color:#6b7280;">Earned Credit</div>
+                    </div>
+                    <div style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:10px; padding:10px 14px; min-width:150px;">
+                      <div style="color:#0ea5e9; font-weight:700;">📈 3.59</div>
+                      <div style="font-size:12px; color:#6b7280;">CGPA</div>
+                    </div>
+                    <div style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:10px; padding:10px 14px; min-width:170px;">
+                      <div style="color:#ef4444; font-weight:800;">🏷️ SUMMER 2025</div>
+                      <div style="font-size:12px; color:#6b7280;">Current Semester</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tabs -->
+                <div style="display:flex; gap:24px; margin-top:14px; border-bottom:1px solid #eef2f7;">
+                  <button style="background:none; border:none; padding:10px 0; font-weight:700; color:#1f2937; position:relative;">
+                    Overview
+                    <span style="position:absolute; left:0; right:0; bottom:-1px; height:3px; background:#3b82f6; border-radius:6px;"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview section -->
+      <div class="panel" style="padding:0;">
+        <div class="panel-body" style="padding: 12px 16px 0 16px;">
+          <div style="background:#ffffff; border:1px solid #e8edf4; border-radius:12px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid #eef2f7;">
+              <div style="font-weight:700;">Overview</div>
+              <div style="display:flex; gap:10px;">
+                <button style="height:30px; padding:0 10px; background:#eef2ff; color:#4338ca; border:1px solid #c7d2fe; border-radius:8px; font-weight:600;">✉️ Update Email</button>
+                <button style="height:30px; padding:0 10px; background:#f3f4f6; color:#374151; border:1px solid #e5e7eb; border-radius:8px; font-weight:600;">✏️ Edit</button>
+              </div>
+            </div>
+            <div style="padding:12px 16px 20px 16px;">
+              <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; row-gap:14px; column-gap:20px; font-size:12px; color:#6b7280;">
+                <div>
+                  <div>FULL NAME:</div>
+                  <div style="color:#111827; font-weight:700;">SHEHZAD HAKIM</div>
+                </div>
+                <div>
+                  <div>MOBILE NO:</div>
+                  <div style="color:#111827; font-weight:600;">01719686885</div>
+                </div>
+                <div>
+                  <div>EMAIL:</div>
+                  <div style="color:#1d4ed8; font-weight:600;">shehzad.hakim@g.bracu.ac.bd</div>
+                </div>
+                <div>
+                  <div>EMERGENCY CONTACT NAME:</div>
+                  <div style="color:#111827; font-weight:600;">Aminul Hakim</div>
+                </div>
+                <div>
+                  <div>EMERGENCY CONTACT NO.:</div>
+                  <div style="color:#111827; font-weight:600;">01711248888</div>
+                </div>
+                <div>
+                  <div>DATE OF BIRTH:</div>
+                  <div style="color:#111827; font-weight:600;">2004-07-29</div>
+                </div>
+                <div>
+                  <div>BIRTH CERTIFICATE NO:</div>
+                  <div style="color:#111827; font-weight:600;">&nbsp;</div>
+                </div>
+                <div>
+                  <div>PASSPORT NO:</div>
+                  <div style="color:#111827; font-weight:600;">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="dash-footer">
+      <div class="footer-inner">
+        <span>2025© <a href="#" class="link">BRAC University</a>. All rights reserved.</span>
+        <span class="right">Developed by: <span class="badge">bracIT</span></span>
+      </div>
+    </footer>
+    <script>
+      // Fallback stylesheet loader
+      window.addEventListener('load', function(){
+        try {
+          var isGrid = getComputedStyle(document.body).display === 'grid';
+          if (!isGrid) {
+            var l = document.createElement('link');
+            l.rel = 'stylesheet';
+            l.href = './styles.css?fallback=1';
+            document.head.appendChild(l);
+          }
+        } catch (e) {}
+      });
+    </script>
+  </body>
+</html>

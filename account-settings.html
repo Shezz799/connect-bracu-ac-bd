@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Account Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css?v=2" />
+    <script src="./dashboard.js?v=3" defer></script>
+  </head>
+  <body class="dashboard-body">
+    <aside class="sidebar" aria-label="Sidebar menu">
+      <div class="sidebar-top">
+        <img class="sidebar-logo" src="./assets/braculogo.png" alt="Logo" />
+        <div class="sidebar-head">
+          <div class="head-line1">Student Lifecycle</div>
+          <div class="head-line2">Management</div>
+        </div>
+        <button class="sidebar-toggle" aria-label="Collapse">›</button>
+      </div>
+      <nav class="sidebar-nav" aria-label="Main">
+        <div class="nav-group has-sub" data-sub="advising">
+          <button type="button" class="nav-main" aria-expanded="false">
+            <span class="nav-icon">A</span>
+            <span class="nav-text">Advising</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <ul class="submenu" aria-label="Advising submenu">
+            <li><a href="phase-one.html" data-route="/studentdashboard/advising/preregistrationphaseone" class="submenu-link">Pre-Registration Phase One</a></li>
+            <li><a href="phase-two.html" data-route="/studentdashboard/advising/preregistrationphasetwo" class="submenu-link">Pre-Registration Phase Two</a></li>
+            <li><a href="section-seat-status.html" data-route="/studentdashboard/advising/sectionseatstatus" class="submenu-link">Section Seat Status</a></li>
+          </ul>
+        </div>
+        <div class="nav-group has-sub" data-sub="scholarship">
+          <button type="button" class="nav-main" aria-expanded="false">
+            <span class="nav-icon">S</span>
+            <span class="nav-text">Scholarship &amp; Waiver</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <ul class="submenu" aria-label="Scholarship and Waiver submenu">
+            <li><a href="scholarship-apply.html" data-route="/studentdashboard/scholarship/apply" class="submenu-link">Apply</a></li>
+            <li><a href="scholarship-history.html" data-route="/studentdashboard/scholarship/history" class="submenu-link">History</a></li>
+          </ul>
+        </div>
+        <a class="nav-item" href="course-drop-application.html" data-route="/studentdashboard/coursedrop">
+          <span class="nav-icon">C</span>
+          <span class="nav-text">Course Drop Application</span>
+        </a>
+        <a class="nav-item" href="semester-drop-application.html" data-route="/studentdashboard/semesterdrop">
+          <span class="nav-icon">S</span>
+          <span class="nav-text">Semester Drop Application</span>
+        </a>
+        <a class="nav-item" href="gradesheet.html" data-route="/studentdashboard/gradesheet">
+          <span class="nav-icon">G</span>
+          <span class="nav-text">Grade Sheet</span>
+        </a>
+        <a class="nav-item" href="probation-application.html" data-route="/studentdashboard/probation">
+          <span class="nav-icon">P</span>
+          <span class="nav-text">Probation</span>
+        </a>
+        <a class="nav-item" href="payslip-view.html" data-route="/studentdashboard/payslip">
+          <span class="nav-icon">P</span>
+          <span class="nav-text">Payslip</span>
+        </a>
+      </nav>
+    </aside>
+
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="role">Student</span>
+        <span class="divider">/</span>
+        <span class="section">Account Settings</span>
+      </div>
+      <div class="topbar-right">
+        <div class="search">
+          <span class="icon" aria-hidden="true">🔍</span>
+          <input type="search" placeholder="Search" />
+          <kbd>Ctrl</kbd><kbd>K</kbd>
+        </div>
+        <button class="icon-btn" title="Full screen">⛶</button>
+        <button class="icon-btn" title="Notifications">🔔</button>
+        <div class="avatar" title="Profile"><img src="./assets/me2.png" alt="User"/></div>
+      </div>
+    </header>
+
+    <main class="dash-content">
+      <div class="panel" style="padding:0;">
+        <div class="panel-title">Account Settings</div>
+        <div class="panel-body" style="padding: 24px; display:grid; place-items:center; min-height: 240px;">
+          <div style="text-align:center; color:#6b7280; font-size:14px; font-weight:600;">Please contact administrator to update you account</div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="dash-footer">
+      <div class="footer-inner">
+        <span>2025© <a href="#" class="link">BRAC University</a>. All rights reserved.</span>
+        <span class="right">Developed by: <span class="badge">bracIT</span></span>
+      </div>
+    </footer>
+    <script>
+      // Fallback stylesheet loader
+      window.addEventListener('load', function(){
+        try {
+          var isGrid = getComputedStyle(document.body).display === 'grid';
+          if (!isGrid) {
+            var l = document.createElement('link');
+            l.rel = 'stylesheet';
+            l.href = './styles.css?fallback=1';
+            document.head.appendChild(l);
+          }
+        } catch (e) {}
+      });
+    </script>
+  </body>
+</html>
