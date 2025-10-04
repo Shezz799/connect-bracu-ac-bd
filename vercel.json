@@ -21,6 +21,8 @@
     { "source": "/studentdashboard/styles.css", "destination": "/styles.css" },
     { "source": "/studentdashboard/(.*)/styles.css", "destination": "/styles.css" },
     { "source": "/studentdashboard/dashboard.js", "destination": "/dashboard.js" },
-    { "source": "/studentdashboard/(.*)/dashboard.js", "destination": "/dashboard.js" }
+    { "source": "/studentdashboard/(.*)/dashboard.js", "destination": "/dashboard.js" },
+
+    { "source": "/studentdashboard/:page", "destination": "/:page.html" }
   ]
 }
